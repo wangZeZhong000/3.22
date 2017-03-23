@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select name="" id="s2" multiple="multiple">
+    <option selected="selected">o1</option>
+    <option selected="selected">o2</option>
+    <option selected="selected">o3</option>
+</select>
+
+<select name="" id="s1">
+    <option >o3</option>
+    <option >o2</option>
+    <option >o1</option>
+</select>
+<input type="checkbox" id="ck" value="男"/>
+</body>
+<script>
+    var s1=document.querySelector("#s1");
+    console.log(s1.value);
+
+    var s2=document.querySelector("#s2");
+    console.log(s2.value);
+
+    var select=document.querySelector("select");
+    console.dir(select);
+
+    select.selectedIndex=-1;//取消选中所有
+
+    //切记、切记，切记：不要交叉使用!!!!!!
+
+    //1、多选
+//    select.setAttribute("multiple","");
+//    //2、取消多选
+//    select.removeAttribute("multiple")
+//
+//    //多选
+//    select.multiple=true;
+//    //取消多选
+//    select.multiple=false;
+
+    var ck=document.querySelector("#ck");
+    console.log(ck.value);
+
+
+//    ck.checked=true;
+//    ck.checked=false;
+
+    //1、多选
+//    ck.setAttribute("checked","checked");
+    //2、取消多选
+    ck.removeAttribute("checked")
+</script>
+</html>
